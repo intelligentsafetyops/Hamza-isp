@@ -23,10 +23,7 @@ export const hero = {
   eyebrow: "QHSE operations & compliance",
   title: "One QHSE platform to replace disconnected systems",
   body: "Replace spreadsheets, paper forms, shared drives, and standalone tools with one platform for risk management, inspections, incidents, training, document control, and compliance. Every record stays linked from start to finish.",
-  secondary: { label: "Explore the platform", href: routes.platformModules },
-  // Drop a real on-site photo into /public/images and set it here; the scene illustration
-  // is the fallback until one is supplied.
-  photo: null as null | { src: string; alt: string }
+  secondary: { label: "Explore the platform", href: routes.platformModules }
 };
 
 export const capabilities = [
@@ -52,12 +49,32 @@ export const reality = {
     timeout: "Stop-work order issued"
   },
   artefacts: [
-    { kind: "Excel", title: "HIRAC_v7_FINAL (2).xlsx", meta: "Last edited by ?", ask: "Is this current?" },
+    {
+      kind: "Excel",
+      title: "HIRAC_v7_FINAL (2).xlsx",
+      meta: "Last edited by ?",
+      ask: "Is this current?"
+    },
     { kind: "SharePoint", title: "H&S / 2023 / Inspections / old", meta: "312 items" },
-    { kind: "Paper", title: "Pre-use inspection sheet", meta: "Handwritten, unsigned", ask: "Who signed it?" },
-    { kind: "Binder", title: "Training records 2022", meta: "Shelf B, site office", ask: "Where’s that cert?" },
+    {
+      kind: "Paper",
+      title: "Pre-use inspection sheet",
+      meta: "Handwritten, unsigned",
+      ask: "Who signed it?"
+    },
+    {
+      kind: "Binder",
+      title: "Training records 2022",
+      meta: "Shelf B, site office",
+      ask: "Where’s that cert?"
+    },
     { kind: "Email chain", title: "RE: RE: FW: excavator cert", meta: "14 messages" },
-    { kind: "CAPA-142", title: "Guard replaced on conveyor 3", meta: "Assigned. Never verified.", open: true }
+    {
+      kind: "CAPA-142",
+      title: "Guard replaced on conveyor 3",
+      meta: "Assigned. Never verified.",
+      open: true
+    }
   ],
   // Which artefacts each failure mode lights up in the scene ("timer" = the countdown).
   points: [
@@ -126,7 +143,11 @@ export const lifecycle = {
       name: "RCA",
       note: "Root cause recorded",
       record: "5 Whys on INC-207",
-      detail: ["Guard removed for maintenance", "Not refitted before restart", "Root cause: no guard check at LOTO release"],
+      detail: [
+        "Guard removed for maintenance",
+        "Not refitted before restart",
+        "Root cause: no guard check at LOTO release"
+      ],
       when: "Wed 13:05",
       entry: "Root cause recorded"
     },

@@ -32,7 +32,9 @@ body {
   font-size: var(--text-body);
   line-height: 1.5;
   letter-spacing: 0.015em;
-  font-feature-settings: "ss01" on, "cv11" on;
+  font-feature-settings:
+    "ss01" on,
+    "cv11" on;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -111,21 +113,4 @@ p {
     opacity 600ms var(--ease-out),
     transform 700ms var(--ease-out);
   transition-delay: var(--reveal-delay, 0ms);
-}
-
-/* Hero product cards drift a few pixels so the scene feels live. */
-@keyframes drift {
-  0%,
-  100% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 0 -6px;
-  }
-}
-@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
-  .drift {
-    animation: drift 7s var(--ease-in-out) infinite;
-    animation-delay: var(--drift-delay, 0s);
-  }
 }

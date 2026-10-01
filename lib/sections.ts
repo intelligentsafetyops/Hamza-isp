@@ -9,7 +9,7 @@ export const sectionVariants = {
       { id: "showcase", label: "Product showcase" },
       { id: "split", label: "Split" },
       { id: "centered", label: "Centered" },
-      { id: "stacked", label: "Text + cards" }
+      { id: "stacked", label: "Text + dashboard" }
     ]
   },
   capabilities: {

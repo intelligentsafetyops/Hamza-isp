@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { lifecycle, ropeBand as band } from "@/content/landing";
+import { resolveCssColor } from "@/lib/css-color";
 import type { RopeColors, RopeScene } from "./scene";
 
 // Mirrors scene.ts so labels can be placed before (and without) loading three.js.
@@ -14,27 +15,11 @@ const smooth = (x: number) => {
 };
 const local = (t: number, p: number) => smooth(p * 1.7 - t * 0.7);
 
-/** Resolve a CSS custom property to a colour three.js can read (handles color-mix()). */
-function resolve(name: string) {
-  const probe = document.createElement("span");
-  probe.style.color = `var(${name})`;
-  probe.style.display = "none";
-  document.body.appendChild(probe);
-  const computed = getComputedStyle(probe).color;
-  probe.remove();
-  const c = document.createElement("canvas").getContext("2d")!;
-  c.fillStyle = "#000";
-  c.fillStyle = computed;
-  c.fillRect(0, 0, 1, 1);
-  const [r, g, b] = c.getImageData(0, 0, 1, 1).data;
-  return `#${[r, g, b].map((v) => v.toString(16).padStart(2, "0")).join("")}`;
-}
-
 function readColors(): RopeColors {
   return {
-    ink: resolve("--color-ink-black"),
-    twist: resolve("--color-parchment-shadow"),
-    flame: resolve("--color-harvest-flame")
+    ink: resolveCssColor("--color-ink-black"),
+    twist: resolveCssColor("--color-parchment-shadow"),
+    flame: resolveCssColor("--color-harvest-flame")
   };
 }
 
