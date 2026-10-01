@@ -76,7 +76,7 @@ export function PlatformTabs() {
                 {f.title}
               </h3>
               <p className="text-warm-stone mt-2">{f.body}</p>
-              <div className="mt-6" aria-hidden={g.featured === "hirac" ? undefined : true}>
+              <div className="mt-6">
                 <Preview />
               </div>
             </div>

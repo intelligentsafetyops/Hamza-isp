@@ -169,12 +169,15 @@ export function PlatformShowcase() {
                 </ul>
               </div>
 
-              {/* The flagship, working, large. */}
-              <div className="bg-cream-canvas/60 border-hairline flex items-center justify-center border-t p-6 sm:p-10 lg:col-span-7 lg:border-t-0 lg:border-l">
+              {/* The flagship, working, large: a product screen on a soft accent wash. */}
+              <div className="border-hairline relative isolate flex items-center justify-center overflow-hidden border-t p-4 sm:p-8 lg:col-span-7 lg:border-t-0 lg:border-l lg:p-10">
+                <div
+                  aria-hidden
+                  className="bg-cream-canvas absolute inset-0 -z-10 [background-image:radial-gradient(ellipse_at_85%_0%,var(--color-marigold-glow),transparent_60%),radial-gradient(var(--color-bone)_1px,transparent_1px)] [background-size:auto,18px_18px]"
+                />
                 <div
                   key={`preview-${active}`}
-                  className="animate-in fade-in-0 zoom-in-[0.98] bg-paper-white border-hairline w-full max-w-[520px] rounded-[16px] border p-5 shadow-[0_20px_40px_-24px_rgba(29,30,28,0.25)] duration-300 motion-reduce:animate-none sm:p-6 lg:[zoom:1.12]"
-                  aria-hidden={g.featured === "hirac" ? undefined : true}
+                  className="animate-in fade-in-0 zoom-in-[0.98] slide-in-from-bottom-2 w-full max-w-[640px] duration-500 motion-reduce:animate-none"
                 >
                   <Preview />
                 </div>
