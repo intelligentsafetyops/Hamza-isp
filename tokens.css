@@ -5,12 +5,12 @@
 
 @theme {
   /* Colors — DESIGN.md */
-  --color-harvest-flame: #fa5d00;
-  --color-marigold-glow: #fee3b5;
-  --color-parchment-shadow: #e3d6c5;
+  --color-harvest-flame: #2f5bea;
+  --color-marigold-glow: color-mix(in oklch, #2f5bea 24%, white);
+  --color-parchment-shadow: color-mix(in oklch, #f4f2ee 86%, #1d1e1c);
   --color-ink-black: #1d1e1c;
   --color-paper-white: #ffffff;
-  --color-cream-canvas: #fff8f1;
+  --color-cream-canvas: #f4f2ee;
   --color-mist-gray: #d9d9d9;
   --color-warm-stone: #615f5c;
   --color-driftwood: #8e8b87;
@@ -21,14 +21,14 @@
   --color-graphite: #999999;
 
   /* Colors — derived */
-  --color-flame-ink: #b84300; /* orange as text on cream: 5.2:1 */
-  --color-flame-hover: #ff7a24; /* CTA hover: brightens, keeps ink label at 6:1 */
-  --color-flame-wash: #ffe9d6; /* tint behind small orange chips */
+  --color-flame-ink: color-mix(in oklch, #2f5bea 72%, black);
+  --color-flame-hover: color-mix(in oklch, #2f5bea 86%, white);
+  --color-flame-wash: color-mix(in oklch, #2f5bea 14%, white);
 
   /* Semantic aliases used by components/ui primitives */
   --color-primary: var(--color-harvest-flame);
   --color-brand-hover: var(--color-flame-hover);
-  --color-on-brand: var(--color-ink-black);
+  --color-on-brand: #ffffff;
   --color-ink: var(--color-ink-black);
   --color-muted-ink: var(--color-warm-stone);
   --color-surface: var(--color-paper-white);
@@ -44,8 +44,8 @@
   --color-popover-foreground: var(--color-ink-black);
 
   /* Typography — families (MuotoWeb → Figtree, Monarch → Newsreader; both free substitutes) */
-  --font-muotoweb: var(--font-figtree), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-monarch: var(--font-newsreader), "Tiempos Headline", Georgia, serif;
+  --font-muotoweb: var(--font-figtree), system-ui, sans-serif;
+  --font-monarch: var(--font-newsreader), Georgia, serif;
   --font-sans: var(--font-muotoweb);
 
   /* Typography — scale */

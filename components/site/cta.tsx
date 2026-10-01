@@ -6,7 +6,7 @@ const base =
   "group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-buttons font-semibold transition-[background-color,box-shadow,transform] duration-200 ease-[var(--ease-out)] active:translate-y-px select-none";
 
 const variants = {
-  // Ink label on flame: 5.3:1. DESIGN.md's own agent guide pairs #fa5d00 with #1d1e1c.
+  // White label on the cobalt accent (--color-on-brand).
   primary:
     "bg-harvest-flame text-on-brand shadow-sm hover:bg-flame-hover hover:shadow-lg focus-visible:outline-flame-ink",
   secondary:
