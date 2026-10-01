@@ -1,0 +1,131 @@
+/* Hallmark · macrostructure: Map / Diagram · tone: warm-utilitarian · anchor hue: flame orange
+ * theme: design.md (locked — Getharvest style reference) · nav: N1b sticky frosted · footer: Ft1 Mast-headed
+ * enrichment: E5 hand-built SVG (rope tangle → lifecycle line, site scene) + Tier A product cards in code
+ * Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4
+ */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--color-cream-canvas);
+  color: var(--color-ink-black);
+  font-family: var(--font-muotoweb);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  font-feature-settings: "ss01" on, "cv11" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-style: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--color-marigold-glow);
+  color: var(--color-ink-black);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-flame-ink);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+@layer utilities {
+  .container-page {
+    width: 100%;
+    max-width: calc(var(--page-max-width) + 2 * 1.5rem);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 1.5rem;
+    }
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Capability strip marquee */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Reveal: fade and rise once on entry (components/motion/reveal.tsx). */
+[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(18px);
+}
+[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 700ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Hero product cards drift a few pixels so the scene feels live. */
+@keyframes drift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .drift {
+    animation: drift 7s var(--ease-in-out) infinite;
+    animation-delay: var(--drift-delay, 0s);
+  }
+}

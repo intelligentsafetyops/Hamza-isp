@@ -1,0 +1,118 @@
+/* Hallmark · tokens · source: DESIGN.md (locked system — Getharvest style reference)
+ * Values are DESIGN.md's own hex tokens. Derived tokens are marked "derived" and exist
+ * only to keep text and focus rings at WCAG AA on the cream canvas.
+ */
+
+@theme {
+  /* Colors — DESIGN.md */
+  --color-harvest-flame: #fa5d00;
+  --color-marigold-glow: #fee3b5;
+  --color-parchment-shadow: #e3d6c5;
+  --color-ink-black: #1d1e1c;
+  --color-paper-white: #ffffff;
+  --color-cream-canvas: #fff8f1;
+  --color-mist-gray: #d9d9d9;
+  --color-warm-stone: #615f5c;
+  --color-driftwood: #8e8b87;
+  --color-ironwood: #4a4a47;
+  --color-ash: #777571;
+  --color-bone: #c0bbb6;
+  --color-smoke: #a5a19c;
+  --color-graphite: #999999;
+
+  /* Colors — derived */
+  --color-flame-ink: #b84300; /* orange as text on cream: 5.2:1 */
+  --color-flame-hover: #ff7a24; /* CTA hover: brightens, keeps ink label at 6:1 */
+  --color-flame-wash: #ffe9d6; /* tint behind small orange chips */
+
+  /* Semantic aliases used by components/ui primitives */
+  --color-primary: var(--color-harvest-flame);
+  --color-brand-hover: var(--color-flame-hover);
+  --color-on-brand: var(--color-ink-black);
+  --color-ink: var(--color-ink-black);
+  --color-muted-ink: var(--color-warm-stone);
+  --color-surface: var(--color-paper-white);
+  --color-canvas: var(--color-cream-canvas);
+  --color-hairline: var(--color-parchment-shadow);
+  --color-hairline-strong: var(--color-bone);
+  --color-ring: var(--color-flame-ink);
+  --color-foreground: var(--color-ink-black);
+  --color-background: var(--color-cream-canvas);
+  --color-muted: var(--color-marigold-glow);
+  --color-muted-foreground: var(--color-warm-stone);
+  --color-popover: var(--color-cream-canvas);
+  --color-popover-foreground: var(--color-ink-black);
+
+  /* Typography — families (MuotoWeb → Figtree, Monarch → Newsreader; both free substitutes) */
+  --font-muotoweb: var(--font-figtree), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-monarch: var(--font-newsreader), "Tiempos Headline", Georgia, serif;
+  --font-sans: var(--font-muotoweb);
+
+  /* Typography — scale */
+  --text-caption: 13px;
+  --text-caption--line-height: 1.35;
+  --text-caption--letter-spacing: 0.2px;
+  --text-body: 16px;
+  --text-body--line-height: 1.5;
+  --text-lede: 17px;
+  --text-lede--line-height: 1.55;
+  --text-subheading: 18px;
+  --text-subheading--line-height: 1.4;
+  --text-subheading--letter-spacing: 0.27px;
+  --text-heading-sm: 20px;
+  --text-heading-sm--line-height: 1.3;
+  --text-heading-sm--letter-spacing: 0.3px;
+  --text-heading: 24px;
+  --text-heading--line-height: 1.26;
+  --text-heading--letter-spacing: 0.36px;
+  --text-heading-lg: 28px;
+  --text-heading-lg--line-height: 1.2;
+  --text-heading-lg--letter-spacing: 0.42px;
+  --text-section: 40px;
+  --text-section--line-height: 1.15;
+  --text-section--letter-spacing: 0.3px;
+  --text-display: 48px;
+  --text-display--line-height: 1.15;
+  --text-display--letter-spacing: 0.72px;
+  --text-display-lg: 72px;
+  --text-display-lg--line-height: 1.08;
+  --text-display-lg--letter-spacing: 0px;
+
+  /* Radius — DESIGN.md */
+  --radius-tags: 999px;
+  --radius-cards: 20px;
+  --radius-images: 16px;
+  --radius-inputs: 16px;
+  --radius-buttons: 16px;
+
+  /* Shadows — DESIGN.md (warm only) */
+  --shadow-sm: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
+  --shadow-lg: rgba(250, 166, 0, 0.25) 6px 4px 24px 0px;
+  --shadow-card: 0 1px 2px rgba(29, 30, 28, 0.06), 0 10px 30px -12px rgba(227, 214, 197, 0.9);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+:root {
+  /* Spacing — DESIGN.md (reference; layout uses the matching 4pt Tailwind scale) */
+  --spacing-4: 4px;
+  --spacing-10: 10px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-100: 100px;
+
+  --page-max-width: 1200px;
+  --header-height: 72px;
+
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+  --dur-slow: 600ms;
+}

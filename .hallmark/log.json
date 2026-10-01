@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-10-01",
+    "macrostructure": "Map / Diagram",
+    "theme": "design.md (locked \u2014 Getharvest style reference)",
+    "theme_axes": "light / roman-serif hero + geometric-sans / warm",
+    "nav": "N1b sticky frosted (design.md-locked)",
+    "footer": "Ft1 Mast-headed",
+    "enrichment": "E5 hand-built SVG (rope tangle \u2192 lifecycle line, pump-house scene) + Tier A product cards",
+    "brief": "Sajjeel Labs QHSE landing (renamed from ISP), DESIGN.md-locked; layout pass: split heads, PDCA 2x2, ruled standards register, stepped maturity"
+  },
+  {
+    "date": "2026-10-01",
+    "macrostructure": "Split Studio",
+    "theme": "design.md (locked)",
+    "theme_axes": "light / geometric-sans / cool",
+    "nav": "N1b (design.md-locked)",
+    "footer": "Ft5 Statement on dark",
+    "enrichment": "Tier A product UI pair (desktop + field) + tabbed step panel + module explorer",
+    "studied": "structure only, from Crossover screenshot (.hallmark/study-crossover.json)",
+    "brief": "ISP landing: DESIGN.md system with studied split-studio structure"
+  },
+  {
+    "date": "2026-10-01",
+    "macrostructure": "Workbench (design.md-locked)",
+    "theme": "design.md (Seline-style reference)",
+    "theme_axes": "light / geometric-sans / cool",
+    "nav": "N1b Canonical three-section",
+    "footer": "Ft2 Inline single line",
+    "enrichment": "Tier A floating product preview + tab pills, grayscale",
+    "brief": "ISP landing revamp to user-supplied DESIGN.md"
+  },
+  {
+    "date": "2026-10-01",
+    "macrostructure": "Workbench",
+    "theme": "custom",
+    "theme_axes": "light / grotesk-sans / cool",
+    "vibe": "warm paper, logo blue, calm enterprise safety",
+    "nav": "N5 Floating pill",
+    "footer": "Ft5 Statement",
+    "enrichment": "Tier A product UI from kit components",
+    "brief": "ISP \u00b7 QHSE SaaS landing page, full redesign"
+  }
+]

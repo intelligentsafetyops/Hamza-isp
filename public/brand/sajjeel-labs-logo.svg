@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" width="220" height="40">
+  <rect width="40" height="40" rx="11" fill="#1d1e1c"/>
+  <path d="M24.5 11.5 H17 a5.25 5.25 0 0 0 0 10.5 h6 a5.25 5.25 0 0 1 0 10.5 H11" fill="none" stroke="#fff8f1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="30" cy="11.5" r="3.6" fill="#fa5d00"/>
+  <text x="52" y="28" font-family="Figtree, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" letter-spacing="-0.2" fill="#1d1e1c">Sajjeel<tspan font-weight="500" fill="#615f5c" dx="6">Labs</tspan></text>
+</svg>
