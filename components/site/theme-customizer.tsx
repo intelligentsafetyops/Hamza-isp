@@ -88,12 +88,12 @@ const bodyFonts: Font[] = [
 
 type Choice = { accent: string; canvas: string; display: string; body: string };
 const DEFAULT: Choice = {
-  accent: "flame",
-  canvas: "cream",
+  accent: "cobalt",
+  canvas: "stone",
   display: "newsreader",
   body: "figtree"
 };
-const KEY = "sl-prototype-theme";
+const KEY = "sl-prototype-theme-v2";
 
 function loadFont(f: Font) {
   if (!f.google) return;
@@ -383,7 +383,7 @@ export function ThemeCustomizer() {
               onClick={() => setChoice(DEFAULT)}
               className="text-ironwood hover:text-ink-black inline-flex h-9 items-center gap-1.5 text-[13px] font-semibold"
             >
-              <RotateCcw aria-hidden className="size-3.5" /> Reset to DESIGN.md
+              <RotateCcw aria-hidden className="size-3.5" /> Reset to default
             </button>
             <button
               type="button"

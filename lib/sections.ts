@@ -6,10 +6,10 @@ export const sectionVariants = {
   hero: {
     label: "Hero",
     options: [
+      { id: "showcase", label: "Product showcase" },
       { id: "split", label: "Split" },
       { id: "centered", label: "Centered" },
-      { id: "stacked", label: "Text + cards" },
-      { id: "showcase", label: "Product showcase" }
+      { id: "stacked", label: "Text + cards" }
     ]
   },
   capabilities: {
@@ -37,10 +37,10 @@ export const sectionVariants = {
   platform: {
     label: "Platform",
     options: [
+      { id: "showcase", label: "Product showcase" },
       { id: "minimal", label: "Minimal" },
       { id: "tabs", label: "Tabs" },
-      { id: "detailed", label: "Detailed" },
-      { id: "showcase", label: "Product showcase" }
+      { id: "detailed", label: "Detailed" }
     ]
   },
   standards: {
